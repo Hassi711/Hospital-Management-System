@@ -1,0 +1,11 @@
+/* PatientPage - iOS Design Overrides */
+
+/* Remove old styles, using App.css utilities instead */
+.patient-page {
+  /* Styles moved to global App.css */
+}
+
+/* Additional page-specific styles if needed */
+.patient-page .table-container {
+  margin-top: 16px;
+}

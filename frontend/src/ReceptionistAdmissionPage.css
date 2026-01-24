@@ -1,0 +1,117 @@
+/* Receptionist Admission Page - Modern Responsive Styles */
+:root{
+  --bg-top: #f5f7fb;
+  --bg-bottom: #eef3fb;
+  --card: #ffffff;
+  --muted: #6b7280;
+  --text: #0f172a;
+  --primary-a: #3b82f6;
+  --primary-b: #6366f1;
+  --accent-a: #10b981;
+  --accent-b: #06b6d4;
+  --danger-a: #fb7185;
+  --danger-b: #ef4444;
+  --radius-lg: 12px;
+  --radius-md: 10px;
+  --soft-shadow: 0 8px 24px rgba(2,6,23,0.06);
+  --soft-shadow-2: 0 14px 40px rgba(2,6,23,0.08);
+  --transition-fast: 180ms cubic-bezier(.2,.9,.2,1);
+}
+
+.admission-page{
+  font-family: Inter, Roboto, system-ui, -apple-system, "Segoe UI", Arial, "Helvetica Neue";
+  min-height:100vh;
+  background: linear-gradient(180deg, var(--bg-top) 0%, var(--bg-bottom) 100%);
+  color:var(--text);
+  padding: 2rem 1rem 4rem;
+}
+
+/* Headings */
+.admission-page h1, .admission-page h2, .admission-page h3{
+  text-align:center;
+  font-weight:800;
+  margin:0 0 0.75rem 0;
+  letter-spacing:-0.2px;
+}
+.admission-page h1{ font-size:1.9rem; }
+.admission-page h2{ font-size:1.25rem; }
+
+/* Card container */
+.admission-page .card{
+  background: linear-gradient(180deg,var(--card) 0%, #fbfdff 100%);
+  border: 1px solid rgba(15,23,42,0.06);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--soft-shadow);
+  transition: box-shadow var(--transition-fast), transform var(--transition-fast);
+}
+.admission-page .card:hover{ box-shadow: var(--soft-shadow-2); transform: translateY(-4px); }
+.admission-page .card-body{ padding:1.25rem; }
+
+/* Form styles */
+.admission-page form{ margin-bottom:1rem; }
+.admission-page label{ display:block; font-weight:700; color:var(--muted); margin-bottom:0.35rem; font-size:0.9rem; }
+.admission-page input[type="text"],
+.admission-page input[type="number"],
+.admission-page input[type="datetime-local"],
+.admission-page select,
+.admission-page textarea{
+  width:100%;
+  padding:0.6rem 0.9rem;
+  border-radius:var(--radius-md);
+  border:1px solid rgba(15,23,42,0.08);
+  background:#fff;
+  box-shadow: 0 6px 18px rgba(2,6,23,0.03) inset;
+  transition: box-shadow var(--transition-fast), border-color var(--transition-fast), transform var(--transition-fast);
+  font-size:0.95rem; color:var(--text);
+}
+.admission-page input:focus, .admission-page select:focus, .admission-page textarea:focus{
+  outline:none; border-color:var(--primary-a); box-shadow:0 12px 36px rgba(59,130,246,0.12);
+  transform: translateY(-1px);
+}
+
+/* Grid for form fields */
+.admission-page .grid-3{ display:grid; grid-template-columns: repeat(3, 1fr); gap:1rem; }
+@media (max-width:900px){ .admission-page .grid-3{ grid-template-columns: 1fr; } }
+
+/* Buttons */
+.admission-page .btn{ display:inline-flex; align-items:center; justify-content:center; gap:0.4rem; padding:0.55rem 0.9rem; border-radius:10px; font-weight:800; color:#fff; cursor:pointer; border:none; box-shadow:0 8px 24px rgba(2,6,23,0.06); transition: transform 220ms cubic-bezier(.2,.9,.2,1), box-shadow 220ms ease; }
+.admission-page .btn-primary{ background: linear-gradient(90deg,var(--primary-a),var(--primary-b)); }
+.admission-page .btn-accent{ background: linear-gradient(90deg,var(--accent-a),var(--accent-b)); }
+.admission-page .btn-danger{ background: linear-gradient(90deg,var(--danger-a),var(--danger-b)); }
+.admission-page .btn:hover{ transform: translateY(-3px); box-shadow: var(--soft-shadow-2); }
+
+/* Table styles */
+.admission-page .table-wrap{ overflow-x:auto; }
+.admission-page table{ width:100%; border-collapse: collapse; min-width:700px; }
+.admission-page thead th{ text-align:left; padding:0.85rem 1rem; font-weight:800; font-size:0.85rem; color:var(--muted); background: rgba(15,23,42,0.03); border-bottom:1px solid rgba(15,23,42,0.06); }
+.admission-page tbody td{ padding:0.85rem 1rem; vertical-align:middle; border-bottom:1px solid rgba(15,23,42,0.04); }
+.admission-page tbody tr{ transition: background var(--transition-fast), transform var(--transition-fast); border-radius:8px; }
+.admission-page tbody tr:hover{ background: linear-gradient(90deg, rgba(99,102,241,0.03), rgba(59,130,246,0.02)); transform: translateY(-2px); }
+
+/* Status badges */
+.admission-page .badge{ display:inline-block; padding:0.25rem 0.65rem; border-radius:999px; font-weight:800; font-size:0.78rem; }
+.admission-page .badge-pending{ background:#fef3c7; color:#92400e; }
+.admission-page .badge-approved{ background:#ecfdf5; color:#065f46; }
+.admission-page .badge-rejected{ background:#fff1f2; color:#9b1c1c; }
+.admission-page .badge-discharged{ background:#e6fffa; color:#0f766e; }
+
+/* Responsive: convert table rows into stacked cards */
+@media (max-width:900px){
+  .admission-page table{ min-width:0; }
+  .admission-page thead{ display:none; }
+  .admission-page tbody{ display:block; }
+  .admission-page tbody tr{ display:block; margin-bottom:1rem; background:var(--card); border-radius:12px; box-shadow:var(--soft-shadow); padding:0.85rem; border:1px solid rgba(15,23,42,0.04); }
+  .admission-page tbody td{ display:block; padding:0.4rem 0.5rem; border-bottom:none; }
+  .admission-page tbody td .row-label{ display:block; font-size:0.78rem; color:var(--muted); margin-bottom:0.25rem; }
+}
+
+/* Utilities */
+.admission-page .muted{ color:var(--muted); }
+.admission-page .accent{ color:var(--primary-b); font-weight:800; }
+.admission-page .flex{ display:flex; }
+.admission-page .gap-2{ gap:0.5rem; }
+.admission-page .mb-2{ margin-bottom:0.5rem; }
+.admission-page .mb-4{ margin-bottom:1rem; }
+
+/* Loading / small text */
+.admission-page .loading{ color:var(--muted); font-size:0.95rem; }

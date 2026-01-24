@@ -1,0 +1,358 @@
+/* Styles scoped to the Receptionist Appointment page */
+.receptionist-page {
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: linear-gradient(180deg, #f5f7fb 0%, #eef3fb 100%);
+  min-height: 100vh;
+  color: #1f2937;
+}
+
+.receptionist-page h1 {
+  font-weight: 700;
+  font-size: 1.75rem;
+  margin: 0;
+  color: #0f172a;
+  letter-spacing: -0.2px;
+}
+
+.receptionist-page .bg-white {
+  background: linear-gradient(180deg, #ffffff 0%, #fbfdff 100%);
+  border: 1px solid rgba(15, 23, 42, 0.06);
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.06);
+}
+
+.receptionist-page .rounded-lg {
+  border-radius: 12px;
+}
+
+.receptionist-page .shadow-md {
+  box-shadow: 0 10px 30px rgba(2,6,23,0.06);
+}
+
+.receptionist-page .p-6 {
+  padding: 1.25rem;
+}
+
+.receptionist-page .btn-primary {
+  background: linear-gradient(90deg,#3b82f6,#6366f1);
+  color: #fff;
+  border: none;
+  padding: 0.5rem 0.9rem;
+  border-radius: 8px;
+  font-weight: 600;
+  box-shadow: 0 6px 18px rgba(99,102,241,0.18);
+}
+.receptionist-page .btn-primary:hover { filter: brightness(0.98); }
+
+.receptionist-page .btn-accent {
+  background: linear-gradient(90deg,#10b981,#06b6d4);
+  color: #fff;
+  border: none;
+  padding: 0.5rem 0.9rem;
+  border-radius: 8px;
+  font-weight: 600;
+  box-shadow: 0 6px 18px rgba(6,182,212,0.12);
+}
+
+.receptionist-page .controls > * { margin-left: 0.5rem; }
+
+.receptionist-page table {
+  width: 100%;
+  border-collapse: collapse;
+  background: transparent;
+}
+
+.receptionist-page thead th {
+  text-align: left;
+  font-size: 0.78rem;
+  color: #475569;
+  padding: 0.9rem 1rem;
+  border-bottom: 1px solid rgba(148,163,184,0.12);
+}
+
+.receptionist-page tbody td {
+  padding: 0.9rem 1rem;
+  vertical-align: middle;
+  border-bottom: 1px solid rgba(148,163,184,0.06);
+}
+
+.receptionist-page tbody tr:hover {
+  background: linear-gradient(90deg, rgba(99,102,241,0.03), rgba(59,130,246,0.02));
+}
+
+.receptionist-page .badge {
+  display: inline-block;
+  padding: 0.25rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 600;
+}
+
+.receptionist-page .status-scheduled { background: #e0f2fe; color: #075985; }
+.receptionist-page .status-completed { background: #ecfdf5; color: #065f46; }
+.receptionist-page .status-cancelled { background: #fff1f2; color: #991b1b; }
+
+.receptionist-page .controls { display:flex; align-items:center; }
+
+@media (max-width: 900px) {
+  .receptionist-page .grid { grid-template-columns: 1fr !important; }
+  .receptionist-page .controls { flex-wrap: wrap; gap: 0.5rem; }
+  .receptionist-page thead { display: none; }
+  .receptionist-page tbody tr { display: block; margin-bottom: 0.75rem; background: #fff; border-radius: 10px; padding: 0.5rem; }
+  .receptionist-page tbody td { display: block; padding: 0.35rem 0.5rem; }
+}
+
+/* Small utilities */
+.receptionist-page .muted { color: #6b7280; }
+.receptionist-page .accent { color: #4f46e5; font-weight: 700; }
+
+.receptionist-page form {
+  background: linear-gradient(180deg, #ffffff 0%, #fbfdff 100%);
+  border: 1px solid rgba(15, 23, 42, 0.06);
+  border-radius: 14px;
+  padding: 1.25rem;
+  box-shadow: 0 10px 28px rgba(2, 6, 23, 0.06);
+}
+
+.receptionist-page label {
+  display: block;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 0.25rem;
+}
+
+.receptionist-page input,
+.receptionist-page select,
+.receptionist-page textarea {
+  width: 100%;
+  padding: 0.55rem 0.65rem;
+  font-size: 0.85rem;
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+  background-color: #fff;
+  transition: all 0.2s ease;
+}
+
+.receptionist-page input:focus,
+.receptionist-page select:focus,
+.receptionist-page textarea:focus {
+  outline: none;
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.15);
+}
+
+.receptionist-page input:disabled,
+.receptionist-page select:disabled {
+  background-color: #f1f5f9;
+  color: #94a3b8;
+  cursor: not-allowed;
+}
+
+.receptionist-page input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  accent-color: #4f46e5;
+}
+
+.receptionist-page form button {
+  margin-top: 0.75rem;
+}
+
+.receptionist-page .dashboard-header {
+  background: linear-gradient(180deg, #ffffff 0%, #fbfdff 100%);
+  border: 1px solid rgba(15, 23, 42, 0.06);
+  border-radius: 14px;
+  padding: 1rem 1.25rem;
+  box-shadow: 0 10px 28px rgba(2, 6, 23, 0.06);
+}
+.receptionist-page .dashboard-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #0f172a;
+  letter-spacing: -0.3px;
+}
+.receptionist-page .dashboard-actions {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+.receptionist-page .btn-warn {
+  background: linear-gradient(90deg, #f97316, #fb923c);
+  color: #fff;
+  border: none;
+  padding: 0.5rem 0.9rem;
+  border-radius: 8px;
+  font-weight: 600;
+  box-shadow: 0 6px 18px rgba(249, 115, 22, 0.2);
+}
+.receptionist-page .btn-secondary {
+  background: linear-gradient(90deg, #8b5cf6, #6366f1);
+  color: #fff;
+  border: none;
+  padding: 0.5rem 0.9rem;
+  border-radius: 8px;
+  font-weight: 600;
+  box-shadow: 0 6px 18px rgba(99, 102, 241, 0.18);
+}
+.receptionist-page button:hover {
+  transform: translateY(-1px);
+  filter: brightness(0.97);
+}
+/* ------------------------------- */
+/* Receptionist Page - Appointments Table Upgrade */
+/* ------------------------------- */
+
+.receptionist-page .appointments-table {
+  width: 100%;
+  border-collapse: separate; /* nicer spacing */
+  border-spacing: 0 8px; /* space between rows */
+  font-family: Inter, sans-serif;
+  font-size: 0.875rem;
+  color: #1f2937;
+}
+
+.receptionist-page .appointments-table thead th {
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  color: #475569;
+  font-weight: 600;
+  padding: 0.75rem 1rem;
+  background-color: #f9fafb;
+  border-bottom: 2px solid #e5e7eb;
+  text-align: left;
+}
+
+.receptionist-page .appointments-table tbody tr {
+  background: #ffffff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+  border-radius: 10px;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.receptionist-page .appointments-table tbody tr:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  background: #f3f4f6;
+}
+
+.receptionist-page .appointments-table tbody td {
+  padding: 0.75rem 1rem;
+  vertical-align: top;
+}
+
+.receptionist-page .cell-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.receptionist-page .cell-title {
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.receptionist-page .badge {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.receptionist-page .mode-self {
+  background: #e0f2fe;
+  color: #075985;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.receptionist-page .mode-staff {
+  background: #ecfdf5;
+  color: #065f46;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.receptionist-page .icon-btn {
+  margin-left: 6px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.receptionist-page .icon-btn:hover {
+  color: #3b82f6;
+  transform: scale(1.1);
+}
+
+.receptionist-page .action-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.receptionist-page .action {
+  padding: 6px 10px;
+  font-size: 0.72rem;
+  border-radius: 8px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.receptionist-page .action.danger {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+.receptionist-page .action.danger:hover {
+  background: #fca5a5;
+  color: #7f1d1d;
+}
+
+.receptionist-page .action.info {
+  background: #ede9fe;
+  color: #5b21b6;
+}
+
+.receptionist-page .action.info:hover {
+  background: #c4b5fd;
+  color: #4c1d95;
+}
+
+.receptionist-page .action.neutral {
+  background: #f1f5f9;
+  color: #334155;
+}
+
+.receptionist-page .action.neutral:hover {
+  background: #e2e8f0;
+  color: #1e293b;
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .receptionist-page .appointments-table thead {
+    display: none;
+  }
+
+  .receptionist-page .appointments-table tbody tr {
+    display: block;
+    margin-bottom: 1rem;
+    padding: 1rem;
+  }
+
+  .receptionist-page .appointments-table tbody td {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 0;
+  }
+
+  .receptionist-page .cell-stack {
+    flex-direction: row;
+    gap: 8px;
+  }
+}
